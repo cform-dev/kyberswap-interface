@@ -383,7 +383,7 @@ function AboutKyberSwap() {
               <Trans>Forum</Trans>
             </ExternalLink>
             {!above500 ? <div /> : <VerticalDivider />}
-            <ExternalLink href={`https://kyber.network`}>Kyber Network</ExternalLink>
+            <ExternalLink href={`https://tokenswap.exchange`}>Kyber Network</ExternalLink>
             <VerticalDivider />
             <StyledInternalLink to={`/about/knc`}>KNC</StyledInternalLink>
           </Flex>

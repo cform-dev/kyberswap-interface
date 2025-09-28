@@ -108,8 +108,8 @@ function Footer() {
             <Text marginRight="6px">
               <Trans>Powered By</Trans>
             </Text>
-            <ExternalLink href="https://kyber.network" style={{ display: 'flex' }}>
-              <PoweredByIconDark width={48} />
+            <ExternalLink href="https://tokenswap.exchange" style={{ display: 'flex' }}>
+              <PoweredByIconDark width={96} />
             </ExternalLink>
           </Item>
           <Separator />
