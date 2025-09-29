@@ -16,8 +16,8 @@ import {
   SAFE_APP_FEE_RECEIVER_ADDRESS,
   SWAP_FEE_RECEIVER_ADDRESS,
 } from 'constants/index'
-import { DEFAULT_SWAP_FEE_NOT_STABLE_PAIRS } from 'constants/tokens'
 import { NETWORKS_INFO } from 'constants/networks'
+import { DEFAULT_SWAP_FEE_NOT_STABLE_PAIRS } from 'constants/tokens'
 import { useActiveWeb3React } from 'hooks'
 import { useKyberswapGlobalConfig } from 'hooks/useKyberSwapConfig'
 import { useSessionInfo } from 'state/authen/hooks'
