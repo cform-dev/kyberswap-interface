@@ -16,6 +16,7 @@ import {
   SAFE_APP_FEE_RECEIVER_ADDRESS,
   SWAP_FEE_RECEIVER_ADDRESS,
 } from 'constants/index'
+import { DEFAULT_SWAP_FEE_NOT_STABLE_PAIRS } from 'constants/tokens'
 import { NETWORKS_INFO } from 'constants/networks'
 import { useActiveWeb3React } from 'hooks'
 import { useKyberswapGlobalConfig } from 'hooks/useKyberSwapConfig'
@@ -24,7 +25,6 @@ import { useAppDispatch } from 'state/hooks'
 import { WrappedTokenInfo } from 'state/lists/wrappedTokenInfo'
 import { ChargeFeeBy } from 'types/route'
 import { isInSafeApp } from 'utils'
-import { DEFAULT_SWAP_FEE_NOT_STABLE_PAIRS } from 'constants/tokens'
 
 export type ArgsGetRoute = {
   parsedAmount: CurrencyAmount<Currency> | undefined
