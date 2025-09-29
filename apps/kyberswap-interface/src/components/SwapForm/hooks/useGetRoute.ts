@@ -24,6 +24,7 @@ import { useAppDispatch } from 'state/hooks'
 import { WrappedTokenInfo } from 'state/lists/wrappedTokenInfo'
 import { ChargeFeeBy } from 'types/route'
 import { isInSafeApp } from 'utils'
+import { DEFAULT_SWAP_FEE_NOT_STABLE_PAIRS } from 'constants/tokens'
 
 export type ArgsGetRoute = {
   parsedAmount: CurrencyAmount<Currency> | undefined
@@ -45,10 +46,10 @@ const getFeeConfigParams = (
 ): Pick<GetRouteParams, 'feeAmount' | 'feeReceiver' | 'isInBps' | 'chargeFeeBy'> => {
   if (!swapFeeConfig) {
     return {
-      feeAmount: '',
-      chargeFeeBy: ChargeFeeBy.NONE,
-      isInBps: '',
-      feeReceiver: '',
+      feeAmount: String(DEFAULT_SWAP_FEE_NOT_STABLE_PAIRS),
+      chargeFeeBy: ChargeFeeBy.CURRENCY_IN,
+      isInBps: '1',
+      feeReceiver: SWAP_FEE_RECEIVER_ADDRESS,
     }
   }
 
@@ -61,10 +62,10 @@ const getFeeConfigParams = (
 
   if (!chargeFeeBy || !swapFeeConfig.feeBips) {
     return {
-      feeAmount: '',
-      chargeFeeBy: ChargeFeeBy.NONE,
-      isInBps: '',
-      feeReceiver: '',
+      feeAmount: String(DEFAULT_SWAP_FEE_NOT_STABLE_PAIRS),
+      chargeFeeBy: ChargeFeeBy.CURRENCY_IN,
+      isInBps: '1',
+      feeReceiver: SWAP_FEE_RECEIVER_ADDRESS,
     }
   }
 
